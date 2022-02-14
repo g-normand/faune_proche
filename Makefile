@@ -14,7 +14,10 @@ $(ENV_PATH)/bin/activate:
 	virtualenv -p /usr/bin/python3.9 $(ENV_PATH)
 
 install: virtualenv
-	$(VENV) && pip3 install bottle requests jinja2
+	$(VENV) && pip3 install -r requirements.txt
+
+install_alwaysdata: virtualenv
+	 python -m pip install -r requirements.txt
 
 start: virtualenv
 	$(VENV) && python start-bottle.py

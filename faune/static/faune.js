@@ -53,7 +53,7 @@ $(document).ready(function() {
         data['pas'] = '0.05';
 
         $.ajax(
-            {url: "faune/from_google_maps",
+            {url: "from_google_maps",
              data: data,
              success : function(data) {
              $(".faune_info").show();

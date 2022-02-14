@@ -9,6 +9,9 @@ Pour Alwaysdata, c'est dans /admin/config/uwsgi
 ```
 chdir = /home/faune/www
 wsgi-file = /home/faune/www/wsgi.py
+
+L installation est:
+make install_alwaysdata
 ``` 
 
 Sinon faire:

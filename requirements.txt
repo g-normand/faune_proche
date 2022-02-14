@@ -1,0 +1,4 @@
+bottle
+bottle_errorsrest
+requests
+jinja2
