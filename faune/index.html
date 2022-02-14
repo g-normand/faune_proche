@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Données Faune autour de moi</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="/static/faune.js"></script>
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.css" type="text/css">
+      
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="showposition">
+      Latitude: <span id="latitude"></span> / Longitude: <span id="longitude"></span><br />
+      <button id="voir_faune" class="btn btn-info">Voir les données autour</button>
+    </div>
+    <div id="errorposition" class="badge badge-error"></div>
+
+    <div>
+      Entrer une URL Google maps : <br /><input type="text" id="google_url" size="150" />
+      <button id="maps_validate" class="btn btn-info">Récupérer URL</button>
+
+      <span class="faune_info badge badge-success" style="display:none;"><a id="faune_url" style="color:white;" target="#blank">Voir les données sur faune-france pour <span id="faune_place"></span></a></span><br />
+      <span id="effacer" class="faune_info badge badge-warning" style="display:none;">Effacer la saisie</span><br />
+    </div>
+
+  </body>
+</html>
