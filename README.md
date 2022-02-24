@@ -9,15 +9,9 @@ Pour Alwaysdata, c'est dans /admin/config/uwsgi
 ```
 chdir = /home/faune/www
 wsgi-file = /home/faune/www/wsgi.py
-
-L installation est:
-make install_alwaysdata
-``` 
-
-Sinon faire:
 ```
-make start
-```
+
+## Install:
 
 
 Pour l'installation:
@@ -25,4 +19,14 @@ Pour l'installation:
 $ git clone git@github.com:g-normand/faune_proche.git
 $ cd faune_proche
 $ make install
-``` 
+```
+
+Sinon faire:
+```
+make serve
+```
+
+
+## Deployer:
+
+    make deploy

@@ -31,6 +31,7 @@ def error500(error):
     print(error)    
     return 'Oups, une erreur est survenue'
 
+
 @route(PREFIX_ROUTE + '/static/<filename>')
 def server_static(filename):
     dir_path = os.path.dirname(os.path.realpath(__file__))

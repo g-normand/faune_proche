@@ -1,6 +1,6 @@
 
 APP_PATH := $(CURDIR)/faune
-ENV_PATH := $(CURDIR)
+ENV_PATH := $(CURDIR)/faune_env
 
 # For shell to bash to be able to use source.
 SHELL = /bin/bash
@@ -16,8 +16,9 @@ $(ENV_PATH)/bin/activate:
 install: virtualenv
 	$(VENV) && pip3 install -r requirements.txt
 
-install_alwaysdata: virtualenv
-	 python -m pip install -r requirements.txt
+deploy:
+	scp -r faune/* guiguide@ssh-guiguide.alwaysdata.net:/home/guiguide/www/faune_proche/faune/
+	scp Makefile wsgi.py start-bottle.py requirements.txt guiguide@ssh-guiguide.alwaysdata.net:/home/guiguide/www/faune_proche/
 
 start: virtualenv
 	$(VENV) && python start-bottle.py
